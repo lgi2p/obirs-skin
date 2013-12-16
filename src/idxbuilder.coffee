@@ -32,6 +32,8 @@ module.exports = class IndexationBuilder
             if err
                 return callback err
             if options?.format is 'json'
+                unless JSON.parse(body)['@graph']?
+                    console.log query
                 results = JSON.parse(body)['@graph']
                 for item in results
                     for key, values of item
@@ -86,6 +88,8 @@ module.exports = class IndexationBuilder
     fetchByids: (ids, callback) =>
         return callback(null, []) unless ids
         uris = ("<#{id}>" for id in ids).join(',')
+        unless uris.length
+            return callback null, []
         @sparql """CONSTRUCT {
             ?s ?p ?o .
         } WHERE {
