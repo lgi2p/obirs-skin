@@ -49,7 +49,7 @@ Edit the file `config.json` to fill your needs. The configuration file take the 
  **ontologyFilePath**: the ontology file path. (should be located in `data/ontologies`)
  **indexationFilePath**: indexation file path. Where the indexation fil should be built. (often in data/indexations)
  **engine**: (default "mohameth2010") the engine to use. There are currently 3 engines available: 
- 	* `mohamteh2010` (from the LGI2P publication)
+ 	* `mohameth2010` (from the LGI2P publication)
  	* `groupwise-standalone`: direct groupwise measure (like jackar)
  	* `groupwise-adon`: groupwise measure (pairwise used in groupwise)
 
