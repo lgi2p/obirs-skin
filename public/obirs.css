@@ -1,0 +1,508 @@
+
+.displayed a h2{
+    color: #2489ce;
+}
+
+.ui-body-c{
+    background-color: #fff;
+    background-image: none;
+}
+
+.page{
+    background-image: none;
+    background-color: #fff;
+}
+
+.page-content{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+.ui-content{
+    background-color: #fff;
+}
+
+.ui-btn-active{
+    border-top-color: #ccc;
+    border-left-color: #ccc;
+    border-right-color: #ccc;
+    background: #eee;
+    font-weight: 700;
+    color: #222;
+    text-shadow: none; /*0 1px 0 #fff;*/
+    background-color: #00B3DE;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#00B3DE),to(#00B3DE));
+    background-image: -webkit-linear-gradient(#00B3DE,#00B3DE);
+    background-image: -moz-linear-gradient(#00B3DE,#00B3DE);
+    background-image: -ms-linear-gradient(#00B3DE,#00B3DE);
+    background-image: -o-linear-gradient(#00B3DE,#00B3DE);
+    background-image: linear-gradient(#00B3DE,#00B3DE);
+}
+
+.ui-li.ui-btn-active{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f1f1f1));
+    background-image: -webkit-linear-gradient(#fff,#f1f1f1);
+    background-image: -moz-linear-gradient(#fff,#f1f1f1);
+    background-image: -ms-linear-gradient(#fff,#f1f1f1);
+    background-image: -o-linear-gradient(#fff,#f1f1f1);
+    background-image: linear-gradient(#fff,#f1f1f1);
+}
+
+.autocomplete-suggestions .ui-li.ui-btn-active{
+    background-color: #00B3DE;
+    background-image: none;
+}
+
+.ui-btn-active:visited,
+.ui-btn-active:hover,
+.ui-btn-active a.ui-link-inherit {
+    color: #222;
+}
+
+/**** autocomplete section ***/
+.autocomplete .ui-block-a{
+    width: 65%;
+}
+
+.autocomplete .ui-block-b{
+    text-align: right;
+    width: 100px;
+}
+
+.autocomplete .ui-block-c{
+    text-align: right;
+    width: 110px;
+}
+
+.autocomplete .search-cmd{
+     text-align: right;
+}
+
+.search-cmd div.ui-slider-switch.ui-mini{
+    width: 105px;
+}
+
+/*.autocomplete .search-cmd a.search-btn{
+    position: relative;
+    top: -20px;
+}*/
+
+.autocomplete .advanced-search.ui-field-contain{
+    /*display: none;*/
+    clear: both;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 7px;
+}
+
+.autocomplete-suggestions{
+    position: relative;
+    top: -17px;
+}
+
+.ui-slider.ui-slider-switch{
+    width: 120px;
+}
+
+/*.results h1.heading{
+    display: none;
+}
+
+.advanced-search{
+    display: none;
+}
+
+.results{
+    display:none;
+}
+*/
+
+.advanced-search .check-infos{
+    vertical-align: top;
+    margin-left: 20%;
+    padding-left: 40px;
+}
+
+
+.good{
+    color: green;
+}
+
+.wrong{
+    color: red;
+}
+
+.muted,
+.muted.ui-link{
+    color: gray;
+}
+
+.slider-wrong .ui-slider-track .ui-slider-bg.ui-btn-active{
+    /*background-image: linear-gradient(#FF0000,#6facd5);*/
+    background-color: #FF0000;
+    background: #FF0000;
+    background-image: none;
+}
+
+.ui-slider input.ui-input-text.ui-slider-input{
+    display: none;
+}
+
+.exact-match{
+    /*color: #8CFF8E;*/
+    /*color: #007F00;*/
+    /*color: rgb(87, 180, 87);*/
+    color: #27ae60;
+}
+
+.other-match{
+    /*color: #8CC4FF;*/
+    /*color: #A800FD;*/
+    /*color: rgb(211, 134, 250);*/
+    color: #8e44ad;
+}
+
+.asc-match{
+    /*color: #FFC88C;*/
+    /*color: #0000FD;*/
+    color: #2980b9;
+}
+
+.desc-match{
+    /*color: #FF8cCFD;*/
+    /*color: #FD0000;*/
+    color: #c0392b;
+}
+
+.autocomplete .ui-input-search.ui-focus.search-no-results{
+    -webkit-box-shadow: 0 0 12px red;
+    box-shadow: 0 0 12px red;
+}
+#document-popup{
+    width: 800px;
+    max-width: 900px;
+}
+
+#document-popup .ui-content img{
+    float: left;
+    margin-right: 20px;
+}
+
+.bull{
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.bull:last-child{
+    display: none;
+}
+
+.ui-btn.ui-btn-corner-all,
+.ui-input-search.ui-btn-corner-all,{
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.ui-shadow{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.results .ui-li-heading {
+    white-space: normal;
+    font-size: 15px;
+}
+
+.results .select-refined .ui-icon-info.ui-icon-shadow {
+    /*background-position: -20px;*/
+    background: none;
+}
+
+.results .select-refined .refine-wanted{
+    background: #27ae60;
+    background-image: none;
+}
+
+.results .select-refined .refine-not-wanted{
+    background: #c0392b;
+    background-image: none;
+}
+
+.normal-list{
+    padding: 0;
+}
+
+
+
+/*
+.ui-panel-inner{
+    padding: 0;
+}
+
+.panel-header{
+    -webkit-box-shadow: inset 5px 0 5px rgba(0,0,0,.15);
+}
+
+.panel-content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+*/
+
+#document-panel{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    bottom: -1px;
+    padding-bottom: 1px;
+}
+
+#document-panel .ui-panel-inner{
+    padding: 0;
+    margin: 15px;
+}
+
+#document-panel h3{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#document-panel .panel-content{
+    width: 100%;
+}
+
+/********************** thumb **************/
+
+/* First breakpoint is 768px. 3 column layout. Tiles 250x250 pixels at the breakpoint. */
+@media all and (min-width: 768px){
+
+    .thumb-list.results .doc-title{
+         font-size: 9px;
+    }
+
+/* wrap on wide viewports once open */
+
+/*
+.ui-panel-closed {
+    visibility: inherit;
+    width: 17em;
+}
+
+.ui-panel-open {
+    visibility: hidden;
+    width: 0;
+}
+
+.ui-panel-content-wrap.ui-panel-content-wrap-closed{
+    margin-left: 17em;
+    margin-right: 17em;
+}
+
+.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open{
+    left: 0;
+    margin-right: 17em;
+}
+
+.ui-panel-content-wrap-position-right.ui-panel-content-wrap-open{
+    left: 17em;
+    margin-right: 17em;
+}
+
+
+.ui-panel-dismiss {
+    display: none;
+}
+*/
+
+    .thumb-list.results li.divider{
+        display: none;
+    }
+
+    .results h1.heading{
+        display: block;
+    }
+
+    .thumb-list.ui-listview p, .thumb-list.ui-listview ul{
+        display: none;
+    }
+    .thumb-list.ui-listview .ui-li.ui-btn {
+        float: left;
+        width: 120px; /* 33.3333% incl. 2 x 1.2% margin */
+        height: 120px;
+        margin: 9px 1.2%;
+        border-width: 0; /* The 1px border would break the layout so we set it on .ui-btn-inner instead. */
+    }
+    /* If you don't want a border at all, just set "border: none;" here to negate the semi white top border */
+    .thumb-list.ui-listview .ui-li.ui-btn-inner {
+        border: inherit;
+        border-width: 1px;
+        margin: -1px;
+    }
+    .thumb-list.ui-listview .ui-btn-inner,
+    .thumb-list.ui-listview .ui-btn-text,
+    .thumb-list.ui-listview .ui-link-inherit,
+    .thumb-list.ui-listview .ui-li-thumb {
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    .thumb-list.ui-listview .ui-link-inherit {
+        padding: 0 !important;
+        position: relative;
+    }
+    /* Inherit the border-radius from the UL that has class .ui-corner-all in case of an inset listview. */
+    .thumb-list.ui-listview .ui-li,
+    .thumb-list.ui-listview .ui-btn-text,
+    .thumb-list.ui-listview .ui-link-inherit,
+    .thumb-list.ui-listview .ui-li-thumb {
+        -webkit-border-radius: inherit;
+        border-radius: inherit;
+    }
+    .thumb-list.ui-listview .ui-li-thumb {
+        height: auto; /* To keep aspect ratio. */
+        max-width: 100%;
+        max-height: none;
+        margin: 0;
+        left: 0;
+        z-index: -1;
+    }
+    /* Hide the icon */
+    .thumb-list.ui-listview .ui-icon {
+        display: none;
+    }
+    /* Make text wrap. */
+    .thumb-list.ui-listview .ui-li-heading,
+    .thumb-list.ui-listview .ui-li-desc {
+        white-space: normal;
+        overflow: visible;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    /* Text position */
+    .thumb-list.ui-listview .ui-li-heading {
+        margin: 0;
+        padding: 20px;
+        bottom: 50%;
+        height: auto;
+        color: white;
+        text-shadow: none;
+    }
+    .thumb-list.ui-listview .ui-li-desc {
+        margin: 0;
+        padding: 0 20px;
+        min-height: 50%;
+        bottom: 0;
+        line-height: 1.5;
+    }
+    /* Semi transparent background and different position if there is a thumb */
+    .thumb-list.ui-listview .ui-li-has-thumb .ui-li-heading,
+    .thumb-list.ui-listview .ui-li-has-thumb .ui-li-desc {
+        background: #111;
+        color: #111111;
+        background: rgba(255,255,255,.8);
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+    }
+    .thumb-list.ui-listview .ui-li-has-thumb .ui-li-heading {
+        padding: 10px;
+        bottom: 0;
+    }
+    .thumb-list.ui-listview .ui-li-has-thumb .ui-li-desc {
+        padding: 0 10px;
+        min-height: 20%;
+        -webkit-border-bottom-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        -webkit-border-bottom-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+    /* ui-li-aside has class .ui-li-desc as well so we have to override some things. */
+    .thumb-list.ui-listview .ui-li-aside {
+        padding: 2px 10px;
+        font-size: 13px;
+        width: auto;
+        min-height: 0;
+        top: -5px;
+        position: relative;
+        text-shadow: none;
+        left: auto;
+        bottom: auto;
+        /* Custom styling. */
+        color: #333;
+        background: rgba(255,255,255,.8);
+        -webkit-border-top-right-radius: inherit;
+        border-top-right-radius: inherit;
+        -webkit-border-bottom-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        -webkit-border-bottom-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .thumb-list .ui-li-has-count .ui-li-count {
+        top: 10px;
+    }
+
+    .thumb-list .ui-li-has-arrow.ui-li-has-count .ui-li-count {
+        right: 0;
+    }
+
+    /* If you want to add shadow, don't kill the focus style. */
+    .thumb-list.ui-listview .ui-btn:not(.ui-focus) {
+        -moz-box-shadow: 0px 0px 9px #111;
+        -webkit-box-shadow: 0px 0px 9px #111;
+        box-shadow: 0px 0px 9px #111;
+    }
+    /* Images mask the hover bg color so we give desktop users feedback by applying the focus style on hover as well. */
+    .thumb-list.ui-listview .ui-btn:hover {
+        -moz-box-shadow: 0px 0px 12px #387bbe;
+        -webkit-box-shadow: 0px 0px 12px #387bbe;
+        box-shadow: 0px 0px 12px #387bbe;
+    }
+    /* Animate focus and hover style, and resizing. */
+    .thumb-list.ui-listview .ui-btn {
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+}
+/* Second breakpoint. 4 column layout. Tiles will be 250x250 pixels again at the breakpoint. */
+
+@media all and (min-width: 800px){
+
+    .autocomplete .ui-block-a{
+       width: 72%;
+    }
+}
+
+@media all and (min-width: 1020px){
+
+    .autocomplete .ui-block-a{
+       width: 79%;
+    }
+
+    /* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
+    By setting the max-width equal to the breakpoint width minus padding we keep square tiles. */
+    .thumb-list.ui-listview {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    /* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
+    but we stick to percentage values for demo purposes. */
+    .thumb-list.ui-listview .ui-li.ui-btn {
+        width: 120px;
+        height: 120px;
+        margin: 10px 1%;
+    }
+}
