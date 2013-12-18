@@ -85,15 +85,25 @@ class app.QueryConcepts extends Backbone.Collection
 
     model: app.QueryConcept
 
+    initialize: () ->
+        @listenTo @, 'add', @resetWeight
+        @listenTo @, 'remove', @resetWeight
+
     # Normalize the weight of each concept so their sum would be equal to 1
     normalizeWeight: () ->
         totalWeight = 0
-        for weight in  @.pluck('weight')
+        for weight in  @pluck('weight')
             totalWeight += weight
-        for concept in @.models
+        for concept in @models
             concept.set 'weight', concept.get('weight')/totalWeight, {silent: true}
-        concept.trigger('change')
+            concept.trigger('change')
     
+    resetWeight: () ->
+        nbConcepts = @length
+        for concept in @models
+            concept.set 'weight', 1/nbConcepts, {silent: true}
+            concept.trigger('change')
+
     removeConceptId: (conceptId) ->
         concept = @findWhere({id: conceptId})
         @remove(concept)
@@ -116,11 +126,13 @@ class app.Results extends Backbone.Collection
         }
         srcUrl = "https://chart.googleapis.com/chart?cht=bvs&chs=#{size}x#{size}&chbh=a&chxt=x,y"
 
-        for publication in @.models
+        for publication in @models
             labels = '&chxl=0:'
             scores = []
             colorations = []
-            for concept, index in publication.get('concepts')
+            concepts = _.sortBy publication.get('concepts'), (concept) ->
+                return concept.queryConcept.title
+            for concept, index in concepts#publication.get('concepts')
                 labels += "|#{index}"
                 scores.push concept.score * 100
                 colorations.push relationTypeColorMapping[concept.relationType]
@@ -375,6 +387,7 @@ class app.QueryView extends Backbone.View
 
     search: (ev) ->
         ev.preventDefault()
+        @model.queryConcepts.reset @model.queryConcepts.sortBy (concept) => concept.get('title')
         @model.search()
 
     clearResults: () ->
@@ -408,9 +421,13 @@ class app.ResultsView extends Backbone.View
                         <h2 class="doc-title">{{docTitle}}</h2>
                         <p>
                             {{#concepts}}
-                                <span class="{{lowercase relationType}}-match">
-                                    {{matchingConcept.title}}
-                                </span>
+                                {{#if score}}
+                                    <span class="{{lowercase relationType}}-match">
+                                        {{matchingConcept.title}}
+                                    </span>
+                                {{else}}
+                                    <span>no match</span>
+                                {{/if}}
                                 <span class="bull"> &bull;</span>
                             {{/concepts}}
                         </p>
@@ -438,6 +455,9 @@ class app.ResultsView extends Backbone.View
 
     render: (ev) ->
         results = @collection.toJSON()
+        for result in results
+            result.concepts = _.sortBy result.concepts, (concept)=>
+                return concept.queryConcept.title
         @$el.html @template {
             results: results,
             noResults: @collection.noResults,
